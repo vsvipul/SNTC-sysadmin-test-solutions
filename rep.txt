@@ -1,16 +1,3 @@
-# Networking
-
-## 1 Information of all public facing hosts of IIT Mandi
-For this task, i simply used a program called nmap (Network Mapper), which is used to discover hosts and services on a network. I typed the following command in the terminal 
-
-```bash
-sudo nmap -O 14.139.34.0/24
-```
-
-, which then gave me all the information about all the PCs, their ports open, and the OS version they were running. I am just pasting the complete report here, which justifies all the requirements, of this task.
-
-
-```txt
 Nmap scan report for 14.139.34.2
 Host is up (0.060s latency).
 Not shown: 968 closed ports, 26 filtered ports
@@ -350,28 +337,6 @@ PORT      STATE    SERVICE
 50500/tcp filtered unknown
 Aggressive OS guesses: Linux 3.2 - 3.8 (99%), WatchGuard Fireware 11.8 (99%), Linux 3.8 (98%), Linux 3.11 - 4.1 (98%), Linux 3.5 (97%), Linux 3.18 (97%), Linux 2.6.32 (96%), IPFire 2.11 firewall (Linux 2.6.32) (96%), Linux 3.1 - 3.2 (96%), Linux 2.6.32 - 2.6.39 (95%)
 No exact OS matches for host (test conditions non-ideal).
-```
 
-## 2. Domain Name
-For this task, i used the **"Who is"** query command in terminal. Unfortunately, this command doesn't work for subdomains like <https://students.iitmandi.ac.in> and i used it like
-
-```bash
-whois iitmandi.ac.in
-```
-
-which gave the following output,
-
-```txt
-Domain ID:D4020030-AFIN
-Domain Name:IITMANDI.AC.IN
-Created On:02-Feb-2010 10:09:08 UTC
-Last Updated On:23-Dec-2014 08:30:40 UTC
-Expiration Date:02-Feb-2020 10:09:08 UTC
-Sponsoring Registrar:ERNET India (R9-AFIN)
-```
-
-,which points out to the fact that <http://www.iitmandi.ac.in> was bought from **ERNET India**, which has been appointed as an exclusive domain registrar for the education and research domains registering the domains under the .in registry from 2005 It registers Domains at second and third level for ac.in, edu.in and res.in zones.
-
-Also, i think that the company who registered the top level domain should have also registered the subdomain <https://students.iitmandi.ac.in> . So, **ERNET India** should have registered this subdomain also.
-
-## 3
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 256 IP addresses (13 hosts up) scanned in 5987.09 seconds
