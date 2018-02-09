@@ -381,7 +381,7 @@ For this task, i first searched a bit and first found out the IP address of <htt
 host duckduckgo.com
 ```
 
-,which gave the output
+which gave the output
 
 ```text
 duckduckgo.com has address 46.51.218.82
@@ -392,7 +392,7 @@ duckduckgo.com mail is handled by 20 in2-smtp.messagingengine.com.
 Then i used **geoiplookup** to track where this IP address was residing.
 
 ```bash
-host 46.51.218.82  
+geoiplookup 46.51.218.82 
 ```
 
 which gave the output.
@@ -404,5 +404,3 @@ GeoIP Country Edition: SG, Singapore
 So, the data centre from which i was receiving the packets was from **Singapore**.
 
 Also, on the **Duck Cooperations** website, it is mentioned that **DuckDuckGo have servers on Amazon EC2 across the world**. [Here is the source](https://duck.co/help/company/architecture). **Amazon AWS Servers are located at 52 locations across the world**. I couldn't list them all here. You can go to <https://aws.amazon.com/about-aws/global-infrastructure/> to see all the data centres.
-
-[map]: https://image.slidesharecdn.com/awsoverviewv4-120611171440-phpapp02/95/overview-of-amazon-web-services-9-728.jpg?cb=1434492790
