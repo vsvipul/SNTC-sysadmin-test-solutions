@@ -1,13 +1,13 @@
 # Networking
 
-## 1 Information of all public facing hosts of IIT Mandi
-For this task, i simply used a program called nmap (Network Mapper), which is used to discover hosts and services on a network. I typed the following command in the terminal 
+## 1. Information of all public facing hosts of IIT Mandi
+For this task, i simply used a program called **nmap (Network Mapper)**, which is used to discover hosts and services on a network. I typed the following command in the terminal 
 
 ```bash
 sudo nmap -O 14.139.34.0/24
 ```
 
-, which then gave me all the information about all the PCs, their ports open, and the OS version they were running. I am just pasting the complete report here, which justifies all the requirements, of this task.
+, which then **gave me all the information about all the PCs, their ports open, and the OS version** they were running. I am just pasting the complete report here, which justifies all the requirements, of this task.
 
 
 ```txt
@@ -374,4 +374,35 @@ Sponsoring Registrar:ERNET India (R9-AFIN)
 
 Also, i think that the company who registered the top level domain should have also registered the subdomain <https://students.iitmandi.ac.in> . So, **ERNET India** should have registered this subdomain also.
 
-## 3
+## 3. Location of DuckDuckGo Data Centres
+For this task, i first searched a bit and first found out the IP address of <https://duckduckgo.com/> by using **host** command.
+
+```bash
+host duckduckgo.com
+```
+
+,which gave the output
+
+```text
+duckduckgo.com has address 46.51.218.82
+duckduckgo.com mail is handled by 10 in1-smtp.messagingengine.com.
+duckduckgo.com mail is handled by 20 in2-smtp.messagingengine.com.
+```
+
+Then i used **geoiplookup** to track where this IP address was residing.
+
+```bash
+host 46.51.218.82  
+```
+
+which gave the output.
+
+```text
+GeoIP Country Edition: SG, Singapore
+```
+
+So, the data centre from which i was receiving the packets was from **Singapore**.
+
+Also, on the **Duck Cooperations** website, it is mentioned that **DuckDuckGo have servers on Amazon EC2 across the world**. [Here is the source](https://duck.co/help/company/architecture). **Amazon AWS Servers are located at 52 locations across the world**. I couldn't list them all here. You can go to <https://aws.amazon.com/about-aws/global-infrastructure/> to see all the data centres.
+
+[map]: https://image.slidesharecdn.com/awsoverviewv4-120611171440-phpapp02/95/overview-of-amazon-web-services-9-728.jpg?cb=1434492790
